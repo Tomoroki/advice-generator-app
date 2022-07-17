@@ -1,0 +1,32 @@
+$fuentePrincipal: 'Manrope', sans-serif;
+
+// Colores
+$black: #111111;
+$white: #f9f9f9;
+
+// Primary
+$lightCyan: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+
+// Neutral
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue: hsl(218, 23%, 16%);
+
+// MediaQueries
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
