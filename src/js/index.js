@@ -11,26 +11,33 @@ fetch(API_URL)
     .then(users => {
         // users.forEach(user => {
         Object.keys(users).forEach(user => {
-            console.log(user);
+            const slip = users[user];
             let elem = document.createElement('li');
-            elem.appendChild(document.createTextNode(`${user.id} - ${user.advice}`));
+            elem.appendChild(document.createTextNode(`${slip.id} - ${slip.advice}`));
             ul.appendChild(elem);
         });
         HTMLResponse.appendChild(ul);
     });
 
-// fetch(`${API_URL}`)
-// // fetch(API_URL)
+const dice = document.querySelector(".card__dice");
+
+dice.addEventListener("click", _ => {
+    location.reload();
+});
+
+// fetch(API_URL)
 //         .then(userJson => userJson.json(), e => {
 //             console.log("Obtención fallida", e);
 //         })
 //         .then(userJson => {
-//             console.log(userJson);
+//             console.log(`Obtencion exitosa de ${userJson}`);
 //     });
-// fetch(`${API_URL}/slip`)
-//     .then((response) => response.json())
-//     .then((slips) => {
-//         const tpl = slips.map((slip) => `<li>${slip.id} ${slip.advice} </li>`);
-//         HTMLResponse.innerHTML = `<ul>${tpl}</ul>`;
-//     });
+// Extract the data from the api and show in console
 
+// fetch(API_URL).then(response => response.json()).then(data => {
+//     console.log(data);
+// }).catch(error => {
+//     console.log(error);
+// }).finally(() => {
+//     console.log("Fin de la ejecución");
+// });
