@@ -40,10 +40,9 @@ Users should be able to:
 -   Semantic HTML5 markup
 -   SCSS custom properties
 -   CSS Flex
--   CSS Grid
 -   Mobile-first workflow
 -   JavaScript
--   Animista CSS
+-   Fetch API
 
 ## Author
 
