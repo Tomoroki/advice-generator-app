@@ -13,13 +13,12 @@
 
 <body>
     <main class="card">
-        <ul class="ul"></ul>
-
-        <picture>
-            <img class="card__divider" src="./assets/pattern-divider-mobile.svg" alt="pattern-divider-mobile">
-        </picture>
-        <picture>
-            <img class="card__divider" src="./assets/pattern-divider-desktop.svg" alt="pattern-divider-mobile">
+        <p class="number__advice"></p>
+        <h1 class="advice"></h1>
+        <picture class="main__hero">
+            <source media="(max-width: 399px)" srcset="./assets/pattern-divider-mobile.svg">
+            <source media="(min-width: 400px)" srcset="./assets/pattern-divider-desktop.svg">
+            <img src="./assets/pattern-divider-mobile.svg" alt="hero-mobile">
         </picture>
 
         <button class="btn__dice">
