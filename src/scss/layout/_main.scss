@@ -1,5 +1,65 @@
 // CARD
-
+.card {
+    background-color: $darkGrayishBlue;
+    padding: 2rem;
+    width: 90%;
+    max-width: 60rem;
+    border-radius: 1rem;
+    position: relative;
+    @include tablet {
+        padding: 4rem;
+    }
+    .number__advice {
+        color: $neonGreen;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        margin: 2rem 0;
+        @include tablet {
+            margin: 0 0 2rem;
+        }
+    }
+    .advice {
+        color: $white;
+        text-align: center;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        @include tablet {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+    }
+    &__divider {
+        max-width: 70rem;
+        img {
+            margin-bottom: 4rem;
+        }
+    }
+    .btn__dice {
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 3rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        padding: 1.8rem;
+        border-radius: 50%;
+        background-color: $neonGreen;
+        &:disabled {
+            background-color: rgb(247, 62, 62);
+        }
+        &:hover {
+            box-shadow: 0 0 2.5rem 0.5rem $neonGreen;
+        }
+        &:hover:disabled {
+            box-shadow: 0 0 2.5rem 0.5rem rgb(247, 62, 62);
+        }
+    }
+}
 .card__dice--disabled {
     display: none;
 }
@@ -12,10 +72,15 @@
 
 /* FOOTER */ 
 .attribution {
-    font-size: 11px;
+    font-size: 1.4rem;
     text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    color: $white;
+    margin-top: 6rem;
+    a {
+        color: $neonGreen;
+        text-decoration: none;
+        &:hover {
+            color: hsl(150, 100%, 33%);
+        }
+    }
 }
